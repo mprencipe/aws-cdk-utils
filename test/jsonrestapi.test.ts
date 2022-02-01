@@ -1,7 +1,7 @@
-import * as cdk from '@aws-cdk/core';
-import { Template } from '@aws-cdk/assertions';
+import * as cdk from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import {JsonRestApi} from '../lib/jsonrestapi';
-import * as lambda from '@aws-cdk/aws-lambda';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
 
 test('API Gateway resources are created', () => {

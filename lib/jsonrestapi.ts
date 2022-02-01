@@ -1,6 +1,6 @@
-import * as cdk from '@aws-cdk/core';
-import * as apigw from '@aws-cdk/aws-apigateway';
-import * as lambda from '@aws-cdk/aws-lambda';
+import {Construct} from "constructs";
+import * as apigw from 'aws-cdk-lib/aws-apigateway';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 
 export const ERROR_TEMPLATE = `#set($inputRoot = $input.path('$'))
 $inputRoot.body
@@ -46,7 +46,7 @@ export class JsonRestApi extends apigw.RestApi {
   private readonly apiKeyRequired: boolean;
 
   constructor(
-    scope: cdk.Construct,
+    scope: Construct,
     id: string,
     props: JsonRestApiProps,
     restApiProps: apigw.RestApiProps = {}
